@@ -1,0 +1,32 @@
+#!/usr/bin/env python
+"""
+usage: tenko <command>
+
+The most commonly used tenko commands are:
+  new_key    Generate a new api keys for the sensors.
+"""
+
+# Standard library dependencies
+import json
+import random
+import string
+from subprocess import call
+
+# Third-party dependencies
+from docopt import docopt
+
+
+def generate_new_api_key():
+    with open('config/auth.json', 'w', encoding='utf8') as outfile:
+        json.dump({'API_KEY': (('%s'%''.join([random.SystemRandom().choice("{}{}".format(string.ascii_letters, string.digits)) for i in range(31)])))},outfile)
+
+
+if __name__ == '__main__':
+    args = docopt(__doc__,
+                  version='1.0.0.dev')
+    if args['<command>'] == 'new_key':
+        print(generate_new_api_key())
+    elif args['<command>'] in ['help', None]:
+        exit(call(['python', 'tenko', '--help']))
+    else:
+        exit("%r is not a valid tenko command. See 'tenko help.'" % args['<command>'])

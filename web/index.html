@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang='en' data-framework='backbonejs'>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+        <title>Tenko</title>
+
+        <link href='assets/vendor/bootstrap/dist/css/bootstrap.min.css' rel='stylesheet'>
+        <link href='assets/css/ie10-viewport-bug-workaround.min.css' rel='stylesheet'>
+        <link href='assets/vendor/fontawesome/css/font-awesome.min.css' rel='stylesheet'>
+        <link href='assets/css/dashboard.min.css' rel='stylesheet'>
+
+        <link href='src/css/style.css' rel='stylesheet'>
+
+        <!--[if lt IE 9]>
+          <script src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js'></script>
+          <script src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js'></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Tenko</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+            </div>
+          </div>
+        </nav>
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+              <ul class="nav nav-sidebar">
+                <li class="active"><a href="#"><i class="fa fa-crosshairs"></i>Sensors <span class="sr-only">(current)</span></a></li>
+                <li><a href="#"><i class="fa fa-exclamation-triangle"></i>Alerts</a></li>
+                <li><a href="#"><i class="fa fa-desktop"></i>Hosts</a></li>
+                <li><a href="#"><i class="fa fa-users"></i>Contacts</a></li>
+                <li><a href="#"><i class="fa fa-gear"></i>Settings</a></li>
+              </ul>
+            </div>
+
+              <h2 class="sub-header">Section title</h2>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Header</th>
+                          <th>Header</th>
+                          <th>Header</th>
+                          <th>Header</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1,001</td>
+                          <td>Lorem</td>
+                          <td>ipsum</td>
+                          <td>dolor</td>
+                          <td>sit</td>
+                        </tr>
+                        <tr>
+                          <td>1,002</td>
+                          <td>amet</td>
+                          <td>consectetur</td>
+                          <td>adipiscing</td>
+                          <td>elit</td>
+                        </tr>
+                        <tr>
+                          <td>1,003</td>
+                          <td>Integer</td>
+                          <td>nec</td>
+                          <td>odio</td>
+                          <td>Praesent</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+          </div>
+        </div>
+
+
+        <script src='assets/vendor/jquery/dist/jquery.min.js'></script>
+        <script src="assets/vendor/underscore/underscore-min.js"></script>
+        <script src="assets/vendor/backbone/backbone-min.js"></script>
+        <script src='assets/vendor/bootstrap/dist/js/bootstrap.min.js'></script>
+        <script src='assets/js/ie10-viewport-bug-workaround.min.js'></script>
+
+        <script src="src/js/views/app-view.js"></script>
+        <script src="src/js/app.js"></script>
+    </body>
+</html>

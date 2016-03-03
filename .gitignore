@@ -1,0 +1,10 @@
+# IDE-related
+.idea/
+
+# Python-related
+__pycache__/
+
+# Frontend vendor assets
+web/assets/vendor/
+
+config/auth.json

@@ -1,0 +1,8 @@
+{
+  "name": "tenko-web",
+  "dependencies": {
+    "backbone": "1.2.3",
+    "bootstrap": "3.3.6",
+    "fontawesome": "4.5.0"
+  }
+}

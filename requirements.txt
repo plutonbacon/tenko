@@ -1,0 +1,5 @@
+docopt==0.6.1
+hug==1.9.9
+peewee==2.8.0
+pymysql==0.7.2
+scapy3-python==0.18
