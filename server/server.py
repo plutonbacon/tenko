@@ -1,4 +1,11 @@
-#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+    tenko.server
+    ~~~~~~~~~~~~
+
+    :copyright: (c) 2016 by Pluto and Bacon.
+    :license: ISC, see LICENSE for more details.
+"""
 
 # Third-party dependencies
 import hug

@@ -3,8 +3,7 @@
 
 # Python-related
 __pycache__/
+.venv/
 
-# Frontend vendor assets
-web/assets/vendor/
-
+# project-related
 config/auth.json

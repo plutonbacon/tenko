@@ -3,7 +3,12 @@
 usage: tenko <command>
 
 The most commonly used tenko commands are:
-  new_key    Generate a new api keys for the sensors.
+  new_sensor_api_key    Generate a new api keys for the sensors.
+  run_server            Start the server.
+  stop_server           Stop the server.
+  run_sensor            Start the sensor.
+  stop_sensor           Stop the sensor.
+  status                Show the status of all services.
 """
 
 # Standard library dependencies
@@ -16,16 +21,21 @@ from subprocess import call
 from docopt import docopt
 
 
-def generate_new_api_key():
-    with open('config/auth.json', 'w', encoding='utf8') as outfile:
+def new_sensor_api_key():
+    with open('config/auth.json', 'w') as outfile:
         json.dump({'API_KEY': (('%s'%''.join([random.SystemRandom().choice("{}{}".format(string.ascii_letters, string.digits)) for i in range(31)])))},outfile)
+
+def run_server():
+    exit(call(['.venv/bin/gunicorn', '-c', './server/config.py', './server/server:__hug_wsgi__']))
 
 
 if __name__ == '__main__':
     args = docopt(__doc__,
                   version='1.0.0.dev')
-    if args['<command>'] == 'new_key':
-        print(generate_new_api_key())
+    if args['<command>'] == 'new_sensor_api_key':
+        new_sensor_api_key()
+    elif args['<command>'] == 'run_server':
+        run_server()
     elif args['<command>'] in ['help', None]:
         exit(call(['python', 'tenko', '--help']))
     else:
